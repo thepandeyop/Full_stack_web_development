@@ -1,3 +1,15 @@
+const superhero = require("./module_caching");
+console.log(superhero.getname());
+superhero.setname("saktiman");
+console.log(superhero.getname());
+
+const newSuperhero = require("./module_caching");
+console.log(newSuperhero.getname());
+
+const math = require("./exporting_patterns");
+const {add, sub} = math;
+
+//.......................UNWANTED CODE WRITTEN BELOW............................................................................//
 /* const fs = require("fs");
 
 // fs.readFile('./sample.txt',(err,data) =>
